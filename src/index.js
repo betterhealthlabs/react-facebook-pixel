@@ -39,9 +39,7 @@ const log = (...args) => {
 
 const verifyInit = () => {
   if (!initialized) {
-    warn(
-      'Pixel not initialized before using call ReactPixel.init with required params',
-    );
+    throw 'Pixel not initialized before using call ReactPixel.init with required params';
   }
   return initialized;
 };
